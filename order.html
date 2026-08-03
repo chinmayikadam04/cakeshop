@@ -657,16 +657,20 @@
     <script>
 const params = new URLSearchParams(window.location.search);
 
-const cake = params.get("cake");
-const price = params.get("price");
+const cakeName = params.get("name");
+const cakePrice = params.get("price");
 
-if (cake && price) {
-    document.getElementById("cakeName").textContent = decodeURIComponent(cake);
-    document.getElementById("cakePrice").textContent = price;
-    document.getElementById("summaryPrice").textContent = price;
-    document.getElementById("totalPrice").textContent = Number(price) + 50;
+if (cakeName) {
+    document.getElementById("cakeName").innerText = cakeName;
+}
+
+if (cakePrice) {
+    document.getElementById("cakePrice").innerText = cakePrice;
+    document.getElementById("summaryPrice").innerText = cakePrice;
+    document.getElementById("totalPrice").innerText = Number(cakePrice) + 50;
 }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
