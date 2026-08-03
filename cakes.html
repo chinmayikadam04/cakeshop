@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Cakes</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+body{
+background:#fff8f5;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.navbar-brand{
+font-size:32px;
+font-family:cursive;
+font-weight:bold;
+color:#ef8fa1;
+}
+
+.nav-link{
+font-size:18px;
+margin-left:15px;
+}
+
+.banner{
+            background:#ef8fa1;
+            color:white;
+            padding:80px 0;
+            text-align:center;
+        }
+
+        .banner h1{
+            font-size:55px;
+            font-family:cursive;
+        }
+
+        .banner p{
+            font-size:20px;
+        }
+
+.custom-banner{
+    background:linear-gradient(135deg,#ef8fa1,#d86c83);
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.btn-order{
+    background:#ef8fa1;
+    color:#fff;
+    border-radius:30px;
+    padding:10px 25px;
+}
+
+.btn-order:hover{
+    background:#d86c83;
+    color:#fff;
+}
+
+/* Footer */
+
+.footer{
+    background:#4a2c2a;
+    color:#ffffff;
+}
+
+.footer-logo{
+    font-family:cursive;
+    font-size:32px;
+    color:#ef8fa1;
+    font-weight:bold;
+}
+
+.footer h5{
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.footer p{
+    color:#dddddd;
+    line-height:28px;
+}
+
+.footer ul li{
+    margin-bottom:10px;
+}
+
+.footer ul li a{
+    color:#dddddd;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer ul li a:hover{
+    color:#ef8fa1;
+    padding-left:6px;
+}
+
+.social-icons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#ef8fa1;
+    color:#ffffff;
+    font-size:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#ffffff;
+    color:#ef8fa1;
+    transform:translateY(-5px);
+}
+
+/* Cake Cards */
+.cake-card{
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    height: 100%;
+}
+
+.cake-card img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.cake-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+
+.cake-card h5{
+    font-weight: bold;
+    color: #4a2c2a;
+}
+
+.cake-card p{
+    color: #666;
+    font-size: 15px;
+}
+
+.price{
+    color: #ef476f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar */
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+/* Active Menu */
+
+.nav-link.active{
+    color: #ef8fa1 !important;
+    font-weight: bold;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+/* Large Desktop */
+
+@media (min-width:1200px){
+
+    .banner{
+        padding:90px 0;
+    }
+
+    .banner h1{
+        font-size:60px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:991px){
+
+    .navbar-brand{
+        font-size:28px;
+    }
+
+    .navbar-nav{
+        text-align:center;
+        padding-top:10px;
+    }
+
+    .nav-link{
+        margin-left:0;
+        padding:10px;
+    }
+
+    .banner{
+        padding:60px 20px;
+    }
+
+    .banner h1{
+        font-size:42px;
+    }
+
+    .banner p{
+        font-size:18px;
+    }
+
+    .cake-card img{
+        height:240px;
+    }
+
+    .price{
+        font-size:22px;
+    }
+
+    .custom-banner{
+        padding:40px 20px !important;
+    }
+
+    .footer{
+        text-align:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:767px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .banner{
+        padding:50px 15px;
+    }
+
+    .banner h1{
+        font-size:34px;
+    }
+
+    .banner p{
+        font-size:16px;
+    }
+
+    .cake-card img{
+        height:220px;
+    }
+
+    .cake-card h5{
+        font-size:20px;
+    }
+
+    .cake-card p{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:20px;
+    }
+
+    .btn-order{
+        width:100%;
+    }
+
+    .custom-banner h2{
+        font-size:28px;
+    }
+
+    .custom-banner p{
+        font-size:16px !important;
+    }
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-logo{
+        font-size:28px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .social-icons a{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px){
+
+    .container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .banner h1{
+        font-size:30px;
+    }
+
+    .banner p{
+        font-size:15px;
+    }
+
+    .cake-card img{
+        height:200px;
+    }
+
+    .btn-order{
+        width:100%;
+        padding:10px;
+        font-size:15px;
+    }
+
+    .custom-banner{
+        border-radius:15px;
+    }
+
+    .custom-banner h2{
+        font-size:24px;
+    }
+
+    .custom-banner p{
+        font-size:15px !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+<a class="navbar-brand" href="index.html">
+The Style Edit
+</a>
+
+
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="menu.html">Menu</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="cakes.html">Cakes</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="banner">
+
+<div class="container">
+
+<h1>Our Cakes</h1>
+
+<p>
+Freshly baked cakes for birthdays, weddings, anniversaries and every celebration.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- Chocolate Cakes -->
+
+<section class="pb-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Chocolate Cakes</h2>
+
+            <p class="text-muted">
+                Rich, creamy and freshly baked chocolate cakes.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cake 1 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJlKoilYDBYEIIPBcdNhlEgdnhaHplXUQ-Gg1sqJMIA&s=10" class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>Chocolate Truffle</h5>
+
+                        <p>Rich chocolate cream cake.</p>
+
+                        <h4 class="price">₹699</h4>
+                        <a href="order.html?name=Chocolate%20Truffle&price=699"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 2 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67LkC9Axf6ZcMWku7mRmBavFVv0J2wbRGRnJJVhWYNg&s=10" class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>Black Forest</h5>
+
+                        <p>Chocolate sponge with cherries.</p>
+
+                        <h4 class="price">₹799</h4>
+
+                        <a href="order.html?name=Black%20Forest&price=799"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 3 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card">
+
+                    <img src="https://eviltwin.kitchen/wp-content/uploads/2016/04/KitKat-Cadbury-Cream-Egg-Easter-Cake-42.jpg" class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>KitKat Cake</h5>
+
+                        <p>Loaded with KitKat chocolates.</p>
+
+                        <h4 class="price">₹899</h4>
+
+                        <a href="order.html?name=KitKat%20Cake&price=899"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 4 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card">
+
+                    <img src="https://images.openai.com/static-rsc-4/_PDHCRKaHFh_6HBUHbkwn2kE7COiDNRl_G91m-U0UKgMo3_M4AO0UZeRJjsZ9BEoeSY_kA12CHSoYSimvoCKMIyVzQXhGyhsq2Qin01WWF0KpRoYCSv6PQpnAar1exuyy2I4WDerSv5qwsc0w1p2C4tyKnDuE-14K1onZ4gCdO7d9QgrxTelzRymD3vQ5nSo?purpose=fullsize">
+
+                    <div class="card-body text-center">
+
+                        <h5>Choco Lava Cake</h5>
+
+                        <p>Filled with molten chocolate.</p>
+
+                        <h4 class="price">₹999</h4>
+
+                        <a href="order.html?name=Choco%20Lava%20Cake&price=999"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Birthday Cakes Section -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Birthday Cakes</h2>
+
+            <p class="text-muted">
+                Make every birthday extra special with our beautifully designed cakes.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cake 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/1_cB_UH8xwOgNy8i8m4u8cUiST9S_UGQtdO-6z7Dl5atC_nRHeWW9bLiZSRFaJNEYUhKAuaqX55OjVL8xqgzXvofu-DhFvL_sOR1RbmZrk6BWu_YyprxZT9HEPrvOQa6a3tGkZBNQl-S2M8uDj6vHJoKSQAPS12b88E2J7dV2bL75I-te988yPOvVNbhS3_x?purpose=fullsize">
+
+                    <div class="card-body text-center">
+
+                        <h5>Rainbow Cake</h5>
+
+                        <p>Colorful layers with creamy vanilla frosting.</p>
+
+                        <h4 class="price">₹999</h4>
+
+                        <a href="order.html?name=Rainbow%20Cake&price=999"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/7di2UNIYX31jaINpbbrn16ziy8zStwSVNGhMrUhK_T39nHYQmrmaWCCgq5XR_RVAZ8tXAJkVIZOsHHw3z3oPDqMLwAR4C3wbJLMGguPUzLATOKHRRxLLH4pifv4DwZUbtam23oi3I3OfnbY9IAX0E_fpypd1dtnatyC_s1wwYzfl0xgiHnLoTM2fUDAMRbxn?purpose=fullsize" class="card-img-top" alt="Princess Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Princess Cake</h5>
+
+                        <p>Beautiful pink cake perfect for birthday celebrations.</p>
+
+                        <h4 class="price">₹1,199</h4>
+
+                       <a href="order.html?name=Princess%20Cake&price=1199"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/5cwEczL79Its1yv9isHq19n01h25u3y_5ZfoC8Aj156IjkOkG0ueYjNRT7QEtwPMhO6t10lXJVtPek_5Qx7fLEhHpnZPKXTU8GTXKjb3RqfcPKYGYtXEHn2uAUPO3VJ1fKUFfSZqMjKa92xm8BA4-Haju57gPsEulh_UEjBras3oHFbAhelGHhQcNtGF35a3?purpose=fullsize">
+
+                    <div class="card-body text-center">
+
+                        <h5>Superhero Cake</h5>
+
+                        <p>Perfect themed cake for kids and superhero fans.</p>
+
+                        <h4 class="price">₹1,299</h4>
+
+                        <a href="order.html?name=Superhero%20Cake&price=1299"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/O359_bqNSHMjHJNwj06EzTuvygHSxxjNu98x1T3T24cJJ0h8ySx46f-G4d_IDVKGd700EAxlqfcw6Xc3JnOJ1ZFpLT51EGP3SHj2LxzhWJHqYiCBPrAcHHeNsQS1gtRPwUxb2X4ke7E3MUPSfJFNgGjsAfIIlbVutnLeahyOkKa3Npi1zyQzQw9HV-iRt5qQ?purpose=fullsize" class="card-img-top" alt="Photo Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Photo Cake</h5>
+
+                        <p>Personalized edible photo cake for your special day.</p>
+
+                        <h4 class="price">₹1,499</h4>
+
+                        <a href="order.html?name=Photo%20Cake&price=1499"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Wedding Cakes Section -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Wedding Cakes</h2>
+
+            <p class="text-muted">
+                Elegant wedding cakes designed to make your special day unforgettable.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cake 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/cL59JvrR9TuoaRssqteN3vG0V76zMMHjXacWcVZkS8EWhu3INRtu08yReyS1Or3pX2wmWAyhH3lVCF_U1Qh6xsaMRYKrBlFAlF01SxkaEw9KO1OZ7zFU990zc-Ty3STksgYi0J3tbbHz5w2HkymzYD_40pSM4flwW_OQMdvJuZvfrjqQu8IGFdA8PUtNsjiL?purpose=fullsize" class="card-img-top" alt="Classic White Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Classic White Cake</h5>
+
+                        <p>Elegant three-tier white wedding cake.</p>
+
+                        <h4 class="price">₹4,999</h4>
+
+                        <a href="order.html?name=Classic%20White%20Cake&price=4999"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://images.openai.com/static-rsc-4/wUUnF4uyRK7XDf1FU4zvy-CT8HILVedbK9zqrukKcgZcEZvWRnwwL7IfPs4cBtJ4xDSISWn2jJRNl7ciYe1Ho4_VqDHV1ClGXPaeVJkeb8wSUtHRrpw87Bhl3pTtbGIDGSSZQy1_ch8vM4IUbyHft3bdgNgdYj9c2Rn1uIKM3Pw5RW6Ljkzf6wvyxonXIWZ8?purpose=fullsize" class="card-img-top" alt="Floral Wedding Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Floral Wedding Cake</h5>
+
+                        <p>Decorated with beautiful fresh flowers.</p>
+
+                        <h4 class="price">₹5,499</h4>
+
+                        <a href="order.html?name=Floral%20Wedding%20Cake&price=5499"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://whimsical-cdn.wedissimo.com/2013/05/Wedding-Cake-Ideas-Flowers-Gold-Leaf-Marianne-Chua-720x1080.jpg" class="card-img-top" alt="Golden Wedding Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Golden Wedding Cake</h5>
+
+                        <p>Luxury cake with elegant golden details.</p>
+
+                        <h4 class="price">₹6,299</h4>
+
+                        <a href="order.html?name=Golden%20Wedding%20Cake&price=6299"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card cake-card h-100">
+
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-113273076-1522962067.jpg?crop=1xw:1xh;center,top&resize=980:*" class="card-img-top" alt="Royal Wedding Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5>Royal Wedding Cake</h5>
+
+                        <p>Premium five-tier cake for grand celebrations.</p>
+
+                        <h4 class="price">₹7,499</h4>
+
+                        <a href="order.html?name=Royal%20Wedding%20Cake&price=7499"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="custom-banner text-center p-5">
+
+            <h2 class="text-white fw-bold">
+                Need a Custom Cake?
+            </h2>
+
+            <p class="text-white fs-5">
+                Design your dream cake for birthdays, weddings, anniversaries,
+                baby showers, and every special occasion.
+            </p>
+
+            <a href="order.html?name=Custom%20Cake&price=0"
+class="btn btn-order">
+    Order Custom Cake
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h3 class="footer-logo">The Style Edit</h3>
+
+                <p>
+                    We create delicious cakes, cupcakes, pastries and desserts
+                    using premium ingredients. Every cake is baked with love
+                    for your special moments.
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-4">
+
+                <h5>Quick Links</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h5>Contact Us</h5>
+
+                <p>📍 Pune, Maharashtra</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>✉ info@thestyleedit.com</p>
+
+
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h5>Follow Us</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="border-light">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 The Style Edit. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patisserie | Menu</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            background:#fff8f5;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:#ffffff;
+            box-shadow:0 3px 10px rgba(0,0,0,.1);
+        }
+
+        .navbar-brand{
+            font-size:32px;
+            font-family:cursive;
+            font-weight:bold;
+            color:#ef8fa1;
+        }
+
+        .nav-link{
+            color:#333;
+            font-size:18px;
+            margin-left:15px;
+        }
+
+        .nav-link:hover{
+            color:#ef8fa1;
+        }
+
+        /* Banner */
+
+        .menu-banner{
+            background:#ef8fa1;
+            color:white;
+            padding:80px 0;
+            text-align:center;
+        }
+
+        .menu-banner h1{
+            font-size:55px;
+            font-family:cursive;
+        }
+
+        .menu-banner p{
+            font-size:20px;
+        }
+
+        /* Category Buttons */
+
+        .category-btn{
+            border:2px solid #ef8fa1;
+            color:#ef8fa1;
+            border-radius:30px;
+            padding:10px 30px;
+            margin:5px;
+            font-weight:bold;
+        }
+
+        .category-btn:hover{
+            background:#ef8fa1;
+            color:white;
+        }
+
+        .menu-card{
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-card img{
+    height:250px;
+    object-fit:cover;
+}
+
+.menu-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-title{
+    font-weight:bold;
+    color:#4a2c2a;
+}
+
+.card-text{
+    color:#666;
+    font-size:15px;
+}
+
+.price{
+    color:#ef476f;
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.btn-order{
+    background:#ef8fa1;
+    color:#fff;
+    border-radius:30px;
+    padding:10px 25px;
+}
+
+.btn-order:hover{
+    background:#d86c83;
+    color:#fff;
+}
+
+.combo-offer{
+    background:linear-gradient(135deg,#ef8fa1,#d86c83);
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+
+.footer{
+    background:#4a2c2a;
+    color:#fff;
+}
+
+.footer-logo{
+    font-family:cursive;
+    font-size:32px;
+    color:#ef8fa1;
+    font-weight:bold;
+}
+
+.footer h5{
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.footer p{
+    color:#ddd;
+}
+
+.footer ul li{
+    margin-bottom:10px;
+}
+
+.footer ul li a{
+    color:#ddd;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer ul li a:hover{
+    color:#ef8fa1;
+    padding-left:5px;
+}
+
+.social-icons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ef8fa1;
+    color:#fff;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#fff;
+    color:#ef8fa1;
+    transform:translateY(-5px);
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+/* Large Desktop */
+@media (min-width:1200px){
+
+    .menu-banner{
+        padding:90px 0;
+    }
+
+    .menu-banner h1{
+        font-size:60px;
+    }
+}
+
+/* Tablet */
+@media (max-width:991px){
+
+    .navbar-brand{
+        font-size:28px;
+    }
+
+    .navbar-nav{
+        text-align:center;
+        padding-top:10px;
+    }
+
+    .nav-link{
+        margin-left:0;
+        padding:10px;
+    }
+
+    .menu-banner{
+        padding:60px 20px;
+    }
+
+    .menu-banner h1{
+        font-size:42px;
+    }
+
+    .menu-banner p{
+        font-size:18px;
+    }
+
+    .menu-card img{
+        height:220px;
+    }
+
+    .price{
+        font-size:22px;
+    }
+
+    .combo-offer{
+        padding:40px 20px !important;
+    }
+
+    .footer{
+        text-align:center;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+}
+
+/* Mobile */
+@media (max-width:767px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .menu-banner{
+        padding:50px 15px;
+    }
+
+    .menu-banner h1{
+        font-size:34px;
+    }
+
+    .menu-banner p{
+        font-size:16px;
+    }
+
+    .menu-card img{
+        height:220px;
+    }
+
+    .card-title{
+        font-size:20px;
+    }
+
+    .card-text{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:20px;
+    }
+
+    .btn-order{
+        width:100%;
+    }
+
+    .combo-offer h2{
+        font-size:28px;
+    }
+
+    .combo-offer p{
+        font-size:16px !important;
+    }
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-logo{
+        font-size:28px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .social-icons a{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .menu-banner h1{
+        font-size:30px;
+    }
+
+    .menu-banner p{
+        font-size:15px;
+    }
+
+    .menu-card img{
+        height:200px;
+    }
+
+    .btn-order{
+        padding:10px;
+        font-size:15px;
+    }
+
+    .combo-offer{
+        border-radius:15px;
+    }
+
+    .combo-offer h2{
+        font-size:24px;
+    }
+
+    .combo-offer p{
+        font-size:15px !important;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            The Style Edit
+        </a>
+
+        <button class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+            id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="menu.html">
+                        Menu
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cakes.html">
+                        Cakes
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Banner -->
+
+<section class="menu-banner">
+
+    <div class="container">
+
+        <h1>Our Menu</h1>
+
+        <p>
+            Freshly baked with love, specially made for you.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Cakes Section -->
+
+<section class="pb-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Our Delicious Cakes</h2>
+
+            <p class="text-muted">
+                Freshly baked cakes for every celebration.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cake 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://i.pinimg.com/736x/1c/11/a9/1c11a988850690944de241f93e63290c.jpg" class="card-img-top" alt="Chocolate Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Chocolate Cake</h5>
+
+                        <p class="card-text">
+                            Rich chocolate sponge with creamy frosting.
+                        </p>
+
+                        <h4 class="price">₹699</h4>
+
+                        <a href="order.html?name=Chocolate%20Cake&price=699"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://images.unsplash.com/photo-1641848373324-bc744c442d5b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Strawberry Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Strawberry Cake</h5>
+
+                        <p class="card-text">
+                            Fresh strawberry cake with whipped cream.
+                        </p>
+
+                        <h4 class="price">₹749</h4>
+
+                        <a href="order.html?name=Strawberry%20Cake&price=749"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1713447395823-2e0b40b75a89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVkJTIwdmVsdmV0JTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Red Velvet">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Red Velvet Cake</h5>
+
+                        <p class="card-text">
+                            Soft red velvet cake with cream cheese frosting.
+                        </p>
+
+                        <h4 class="price">₹799</h4>
+
+                        <a href="order.html?name=Red%20Velvet%20Cake&price=799"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cake 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://i.pinimg.com/736x/4a/e0/a0/4ae0a060f71d6f789a5bc96c54aad0de.jpg" class="card-img-top" alt="Fruit Cake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Fruit Cake</h5>
+
+                        <p class="card-text">
+                            Topped with fresh seasonal fruits and cream.
+                        </p>
+
+                        <h4 class="price">₹849</h4>
+
+                        <a href="order.html?name=Fruit%20Cake&price=849"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Cupcakes Section -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Delicious Cupcakes</h2>
+
+            <p class="text-muted">
+                Sweet, colorful, and perfect for every occasion.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cupcake 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://media.istockphoto.com/id/655156000/photo/chocolate-cupcakes-with-peanut-paste-the-old-grunge-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=Ika_nU8Q6tti9-RzQUeL9r47JJWhO-dMHGD3FmwaiHw=" class="card-img-top" alt="Chocolate Cupcake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Chocolate Cupcake</h5>
+
+                        <p class="card-text">
+                            Soft chocolate cupcake with creamy frosting.
+                        </p>
+
+                        <h4 class="price">₹99</h4>
+
+                        <a href="order.html?name=Chocolate%20Cupcake&price=99"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cupcake 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dmFuaWxsYSUyMGN1cGNha2VzfGVufDB8fDB8fHww" class="card-img-top" alt="Vanilla Cupcake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Vanilla Cupcake</h5>
+
+                        <p class="card-text">
+                            Classic vanilla cupcake topped with buttercream.
+                        </p>
+
+                        <h4 class="price">₹89</h4>
+
+                        <a href="order.html?name=Vanilla%20Cupcake&price=89"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cupcake 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0NoAH_fnKZ3r-mbAFT4IHgGdsUC11L7UWAV5eXXWV6g&s=10">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Red Velvet Cupcake</h5>
+
+                        <p class="card-text">
+                            Rich red velvet cupcake with cream cheese frosting.
+                        </p>
+
+                        <h4 class="price">₹119</h4>
+
+                        <a href="order.html?name=Red%20Velvet%20Cupcake&price=119"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cupcake 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69wWvVuuP9Jf115HmadAaZFxk0nSBLfR6lVA91TulBw&s=10" class="card-img-top" alt="Strawberry Cupcake">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Strawberry Cupcake</h5>
+
+                        <p class="card-text">
+                            Fresh strawberry cupcake with whipped cream.
+                        </p>
+
+                        <h4 class="price">₹109</h4>
+
+                        <a href="order.html?name=Strawberry%20Cupcake&price=109"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Pastries Section -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Fresh Pastries</h2>
+
+            <p class="text-muted">
+                Crispy, creamy, and freshly baked every day.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Pastry 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://i.pinimg.com/736x/69/f9/41/69f941c50aca90a9d0c5840ee2e31aee.jpg" class="card-img-top" alt="Chocolate Pastry">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Chocolate Pastry</h5>
+
+                        <p class="card-text">
+                            Rich chocolate layers with creamy frosting.
+                        </p>
+
+                        <h4 class="price">₹149</h4>
+
+                        <a href="order.html?name=Chocolate%20Pastry&price=149"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Pastry 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://images.unsplash.com/photo-1579195839728-ed9784accf23?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHBpbmVhcHBsZSUyMHBhc3RyeSUyMGNha2V8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Pineapple Pastry">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Pineapple Pastry</h5>
+
+                        <p class="card-text">
+                            Soft vanilla sponge with fresh pineapple cream.
+                        </p>
+
+                        <h4 class="price">₹139</h4>
+
+                        <a href="order.html?name=Pineapple%20Pastry&price=139"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Pastry 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35AVxp-oyhvrpK3gj11dI1m3V6fstSNQM8jTEAE_d8A&s=10" class="card-img-top" alt="Butterscotch Pastry">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Butterscotch Pastry</h5>
+
+                        <p class="card-text">
+                            Delicious butterscotch flavor with crunchy toppings.
+                        </p>
+
+                        <h4 class="price">₹159</h4>
+
+                        <a href="order.html?name=Butterscotch%20Pastry&price=159"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Pastry 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKBmoOgduMlg2kg3-PCIgTxFm10DgbgQnRpm5LFFuwg&s=10" class="card-img-top" alt="Blueberry Pastry">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Blueberry Pastry</h5>
+
+                        <p class="card-text">
+                            Creamy blueberry pastry topped with fresh berries.
+                        </p>
+
+                        <h4 class="price">₹169</h4>
+
+                        <a href="order.html?name=Blueberry%20Pastry&price=169"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Cookies Section -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Fresh Cookies</h2>
+
+            <p class="text-muted">
+                Crispy, buttery, and baked fresh every day.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Cookie 1 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWZLRvBe1hd_avaBHeJUYe6QuGD20yg-INjllx78qFkQ&s=10" class="card-img-top" alt="Chocolate Chip Cookies">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Chocolate Chip Cookies</h5>
+
+                        <p class="card-text">
+                            Loaded with rich chocolate chips.
+                        </p>
+
+                        <h4 class="price">₹199</h4>
+
+                       <a href="order.html?name=Chocolate%20Chip%20Cookies&price=199"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cookie 2 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM7tjDKHupVemxDVUbUEOff9Zu9yrR7f7_nsievL_xw&s=10" class="card-img-top" alt="Butter Cookies">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Butter Cookies</h5>
+
+                        <p class="card-text">
+                            Soft, buttery cookies that melt in your mouth.
+                        </p>
+
+                        <h4 class="price">₹179</h4>
+
+                        <a href="order.html?name=Butter%20Cookies&price=179"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cookie 3 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcbdGHpaJSZglFL1UZnUfhXCrx4Pc1ok6FHCsFEvsXyA&s=10" class="card-img-top" alt="Oatmeal Cookies">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Oatmeal Cookies</h5>
+
+                        <p class="card-text">
+                            Healthy oatmeal cookies with crunchy nuts.
+                        </p>
+
+                        <h4 class="price">₹189</h4>
+
+                        <a href="order.html?name=Oatmeal%20Cookies&price=189"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cookie 4 -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card menu-card h-100">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlbpyxRoX8lu3VE9UPAufoFwOR4D24BFtkvqwJASe0OA&s=10" class="card-img-top" alt="Almond Cookies">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">Almond Cookies</h5>
+
+                        <p class="card-text">
+                            Crunchy almond cookies with a rich nutty flavor.
+                        </p>
+
+                        <h4 class="price">₹219</h4>
+
+                        <a href="order.html?name=Almond%20Cookies&price=219"
+class="btn btn-order">
+    Order Now
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Special Combo Offer -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="combo-offer text-center p-5">
+
+            <h2 class="fw-bold text-white">
+                🎉 Special Combo Offer
+            </h2>
+
+            <p class="text-white fs-5 mt-3">
+                Buy <strong>2 Cakes</strong> and Get
+                <strong>1 Pastry FREE!</strong>
+            </p>
+
+            <a href="order.html?name=Special%20Combo%20Offer&price=1399"
+class="btn btn-light btn-lg mt-3">
+    Order Now
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Bakery Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h3 class="footer-logo">The Style Edit</h3>
+
+                <p>
+                    Freshly baked cakes, pastries, cupcakes, cookies, and desserts
+                    crafted with love for every celebration.
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-4">
+
+                <h5>Quick Links</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h5>Contact Us</h5>
+
+                <p>📍 Pune, Maharashtra</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>✉ info@thestyleedit.com</p>
+
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h5>Follow Us</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 The Style Edit. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
